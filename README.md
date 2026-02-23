@@ -5,6 +5,12 @@ A multimodal deep learning project that generates natural language captions from
 
 ---
 
+## Model Weights
+
+Hosted on HuggingFace 🤗 → [saiiiiiiii/PehchanLiyaaaa](https://huggingface.co/saiiiiiiii/PehchanLiyaaaa)
+
+---
+
 ## Demo
 
 Upload any image → get an AI-generated caption + attention heatmap showing where the model looked.
@@ -57,9 +63,10 @@ multimodal_captioning/
 
 ## Setup
 
-**1. Clone / download the project**
+**1. Clone the project**
 ```bash
-cd multimodal_captioning
+git clone https://github.com/SaiiiKumarrr05/PehchanLiyaaaa.git
+cd PehchanLiyaaaa
 ```
 
 **2. Install dependencies**
@@ -67,7 +74,12 @@ cd multimodal_captioning
 pip install -r requirements.txt
 ```
 
-**3. Add your dataset**
+**3. Download model weights from HuggingFace**
+```bash
+huggingface-cli download saiiiiiiii/PehchanLiyaaaa --local-dir models/my_captioning_model2 --repo-type model
+```
+
+**4. Add your dataset**
 
 Place your images in `archive/Images/` and captions in `archive/captions.json`.
 
@@ -143,6 +155,7 @@ nltk
 rouge-score
 tqdm
 evaluate
+huggingface_hub
 ```
 
 ---
